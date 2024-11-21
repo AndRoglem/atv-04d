@@ -3,7 +3,6 @@ using Exo.WebApi.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-
 namespace Exo.WebApi.Controllers
 {
     [Route("api/[controller]")]
@@ -51,7 +50,7 @@ namespace Exo.WebApi.Controllers
             _projetoRepository.Deletar(id);
             return StatusCode(204);
         }
-        catch (Exception e)
+        catch (Exception)
             {
                 return BadRequest();
             }
